@@ -42,10 +42,10 @@ const TaskTable: React.FC = () => {
   };
 
   return (
-    <div className="bg-white p-2 rounded-xl shadow-sm">
+    <div className=" p-2 rounded-xl shadow-sm text-gray-800">
       {/* Header with filter */}
       <div className="flex items-center justify-between mb-2">
-        <h3 className="text-sm font-semibold">Daily Task</h3>
+        <h3 className="text-sm font-semibold text-black">Daily Task</h3>
         <select
           value={filter}
           onChange={handleFilterChange}

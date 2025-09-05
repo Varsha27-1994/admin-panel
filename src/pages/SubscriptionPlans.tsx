@@ -117,7 +117,7 @@ const SubscriptionPlans: React.FC = () => {
               <h2 className="text-lg font-semibold">{selectedPlan.name}</h2>
               <p className="text-sm opacity-90">{selectedPlan.description}</p>
               <div className="mt-3 flex items-center justify-between">
-                <span className="text-2xl font-bold">
+                <span className="text-2xl font-bold text-black">
                   ${selectedPlan.price.toFixed(2)}
                 </span>
                 <span className="text-xs">
@@ -331,7 +331,7 @@ const SubscriptionPlans: React.FC = () => {
                 </h3>
                 <p className="text-sm text-gray-600">{plan.description}</p>
                 <div className="mt-2 flex justify-between items-center">
-                  <span className="text-lg font-bold">
+                  <span className="text-lg font-bold text-black">
                     ${plan.price.toFixed(2)}
                   </span>
                   <span className="text-xs text-gray-500">

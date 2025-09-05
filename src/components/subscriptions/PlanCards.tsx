@@ -23,7 +23,7 @@ const PlanCards: React.FC<PlanCardsProps> = ({ plans, billing }) => (
       >
         <div className="text-center mb-6">
           <h3 className="text-xl font-semibold text-gray-900">{plan.name}</h3>
-          <div className="mt-2 flex items-center justify-center">
+          <div className="mt-2 flex items-center justify-center ">
             <span className="text-3xl font-bold text-gray-900">
               {plan.price === 0 ? "Free" : `$${plan.price.toFixed(2)}`}
             </span>

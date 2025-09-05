@@ -23,11 +23,11 @@ const RecentActivities: React.FC = () => {
   };
 
   return (
-    <div className="bg-white p-2 rounded-lg shadow-sm border border-gray-200">
-      <h3 className="text-sm font-semibold mb-2">Recent Activities</h3>
+    <div className=" p-2 rounded-lg shadow-sm border border-gray-200">
+      <h3 className="text-sm font-semibold mb-2 text-black">Recent Activities</h3>
       <div className="mb-2">
         <select
-          className="w-full p-2 text-xs border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 text-xs border border-gray-300 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
           value={filter}
           onChange={handleFilterChange}
         >

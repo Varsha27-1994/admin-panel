@@ -56,6 +56,11 @@ const TrendsChart: React.FC = () => {
     { month: "May", applicants: 200 },
     { month: "Jun", applicants: 240 },
     { month: "Jul", applicants: 280 },
+    { month: "Aug", applicants: 210 },
+    { month: "Sep", applicants: 250 },
+    { month: "Oct", applicants: 290 },
+    { month: "Nov", applicants: 270 },
+    { month: "Dec", applicants: 300 },
   ];
 
   // Hiring pipeline data
@@ -95,42 +100,45 @@ const TrendsChart: React.FC = () => {
       <div className="grid grid-cols-3 gap-3">
         {/* Donut Chart */}
         <div className="bg-white p-4 col-span-1 rounded-xl shadow-sm">
-          <h3 className="text-sm font-semibold mb-2">Open Position</h3>
-          <div className="h-20">
-            <ResponsiveContainer width="100%" height="100%">
-              <PieChart>
-                <Pie
-                  data={pieData}
-                  cx="50%"
-                  cy="50%"
-                  innerRadius={25}
-                  outerRadius={40}
-                  dataKey="value"
-                >
-                  {pieData.map((entry: PieDataItem, index: number) => (
-                    <Cell key={`cell-${index}`} fill={entry.color} />
-                  ))}
-                </Pie>
-                <Tooltip />
-              </PieChart>
-            </ResponsiveContainer>
-          </div>
-          <div className="flex justify-center gap-4 mt-2">
-            {pieData.map((item: PieDataItem, index: number) => (
-              <div key={index} className="flex items-center gap-1">
-                <div
-                  className="w-2.5 h-2.5 rounded-full"
-                  style={{ backgroundColor: item.color }}
-                ></div>
-                <span className="text-xs text-gray-600">{item.name}</span>
-              </div>
-            ))}
+          <h3 className="text-sm font-semibold mb-2 text-black">Open Position</h3>
+          <div className="flex items-center justify-between">
+            <div className="flex-1 h-32 flex justify-center">
+              <ResponsiveContainer width="100%" height="100%">
+                <PieChart>
+                  <Pie
+                    data={pieData}
+                    cx="50%"
+                    cy="50%"
+                    innerRadius={25}
+                    outerRadius={40}
+                    dataKey="value"
+                  >
+                    {pieData.map((entry: PieDataItem, index: number) => (
+                      <Cell key={`cell-${index}`} fill={entry.color} />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                </PieChart>
+              </ResponsiveContainer>
+            </div>
+
+            <div className="flex flex-col justify-center gap-2 ml-6">
+              {pieData.map((item: PieDataItem, index: number) => (
+                <div key={index} className="flex items-center gap-2">
+                  <div
+                    className="w-2.5 h-2.5 rounded-full flex-shrink-0"
+                    style={{ backgroundColor: item.color }}
+                  ></div>
+                  <span className="text-xs text-gray-600">{item.name}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Overview Chart */}
         <div className="bg-white px-4 p-2 col-span-2 rounded-xl shadow-sm">
-          <h3 className="text-sm font-semibold mb-2">Overview</h3>
+          <h3 className="text-sm font-semibold mb-2 text-black">Overview</h3>
           <div className="h-40">
             <ResponsiveContainer width="100%" height="100%">
               <ComposedChart data={lineChartData}>

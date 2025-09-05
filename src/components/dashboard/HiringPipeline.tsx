@@ -103,11 +103,11 @@ const [loading, setLoading] = useState<boolean>(true);
   }, []);
 
   return (
-    <div className="bg-white rounded-2xl shadow px-4 pt-1 w-full h-[250px] flex flex-col">
+    <div className=" rounded-2xl shadow px-4 pt-1 w-full h-[250px] flex flex-col">
       {/* Header */}
       <div className="flex items-center justify-between mb-2 shrink-0">
-        <h2 className="text-lg font-semibold">Hiring</h2>
-        <div className="flex items-center gap-2">
+        <h2 className="text-lg font-semibold text-black">Hiring</h2>
+        <div className="flex items-center gap-2 text-gray-800">
           <select className="border rounded-lg px-3 text-xs py-1">
             <option>Design</option>
             <option>Marketing</option>
@@ -139,7 +139,7 @@ const [loading, setLoading] = useState<boolean>(true);
           : jobsData.map((job: Job, idx: number) => (
               <div
                 key={idx}
-                className="grid grid-cols-6 items-center py-2 text-sm border-b last:border-none"
+                className="grid grid-cols-6 items-center py-2 text-sm border-b last:border-none text-gray-900"
               >
                 {/* Job Name */}
                 <div>

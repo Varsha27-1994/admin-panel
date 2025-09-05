@@ -61,7 +61,7 @@ const KPICards: React.FC = () => {
           <div className={`p-3 rounded-lg ${item.bg}`}>{item.icon}</div>
           <div>
             <p className="text-sm text-gray-500">{item.label}</p>
-            <p className="text-lg font-semibold">{item.value}</p>
+            <p className="text-lg font-semibold text-black">{item.value}</p>
             <p className={`text-xs ${item.color}`}>{item.change} last month</p>
           </div>
         </div>
